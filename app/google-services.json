@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "141361165531",
+    "firebase_url": "https://movie-logger-478b7.firebaseio.com",
+    "project_id": "movie-logger-478b7",
+    "storage_bucket": "movie-logger-478b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141361165531:android:7453b83e0ce278696fc8fe",
+        "android_client_info": {
+          "package_name": "com.example.movielogger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141361165531-uspi1sv91cp28oph9ih9k8rg54bapp75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movielogger",
+            "certificate_hash": "eae061cbc735dd99e2fe48e656586e45fa6aa2bc"
+          }
+        },
+        {
+          "client_id": "141361165531-ht1gimtrrkvf6qccope948kc4onb9r7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3zu1I-guimHKLqfMM6KArnMQEjHieu1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141361165531-ht1gimtrrkvf6qccope948kc4onb9r7p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
