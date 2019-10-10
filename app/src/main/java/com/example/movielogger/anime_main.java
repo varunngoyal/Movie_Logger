@@ -6,17 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class anime_main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_anime_main);
     }
 
-    public void gotoanime(View view)
-    {
-        Intent intent = new Intent(this, anime_main.class);
+    public void anime_add_new(View view) {
+        Intent intent = new Intent(this, animelist.class);
         startActivity(intent);
     }
 }

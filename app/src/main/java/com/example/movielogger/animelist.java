@@ -48,7 +48,7 @@ public class animelist extends AppCompatActivity {
 
         reff.child(key).setValue(ani);
 
-        reff.addValueEventListener(new ValueEventListener() {
+        /*reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot keynode: dataSnapshot.getChildren())
@@ -63,7 +63,7 @@ public class animelist extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
     }
 }
