@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView4"
@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
-                android:text="Hello anime!"
+                android:text="List of watched anime"
                 android:textSize="24sp" />
 
             <Button
@@ -32,7 +32,7 @@
                 android:layout_below="@+id/textView4"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
-                android:onClick="anime_add_new"
+                android:onClick="addAnime"
                 android:text="Add anime" />
 
             <androidx.recyclerview.widget.RecyclerView

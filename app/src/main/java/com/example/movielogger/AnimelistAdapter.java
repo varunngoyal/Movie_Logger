@@ -9,14 +9,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.movielogger.models.Anime;
+
+import java.util.ArrayList;
+
 import static com.example.movielogger.R.id.imgIcon;
 
 public class AnimelistAdapter extends RecyclerView.Adapter<AnimelistAdapter.AnimelistViewHolder> {
 
-    private String[] data;
-    public AnimelistAdapter(String[] data)
+    public ArrayList<Anime> animeArrayList;
+
+    public AnimelistAdapter(ArrayList<Anime> animeArrayList)
     {
-        this.data = data;
+        this.animeArrayList = animeArrayList;
     }
     @NonNull
     @Override
@@ -28,22 +33,26 @@ public class AnimelistAdapter extends RecyclerView.Adapter<AnimelistAdapter.Anim
 
     @Override
     public void onBindViewHolder(@NonNull AnimelistViewHolder holder, int position) {
-        String title = data[position];
+        String title = animeArrayList.get(position).getAnimeName();
+        String subtitle = new Integer(animeArrayList.get(position).getYearView()).toString();
+
         holder.txtTitle.setText(title);
+        holder.txtSubTitle.setText(subtitle);
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return animeArrayList.size();
     }
 
     public class AnimelistViewHolder extends RecyclerView.ViewHolder{
         ImageView imgIcon;
-        TextView txtTitle;
+        TextView txtTitle, txtSubTitle;
         public AnimelistViewHolder(@NonNull View itemView) {
             super(itemView);
             imgIcon = itemView.findViewById(R.id.imgIcon);
-            txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
+            txtTitle = itemView.findViewById(R.id.txtTitle);
+            txtSubTitle = itemView.findViewById(R.id.txtSubTitle);
         }
     }
 }
