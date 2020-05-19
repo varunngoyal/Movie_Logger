@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void gotoanime(View view)
     {
-        Intent intent = new Intent(this, anime_main.class);
+        Intent intent = new Intent(this, AnimeMainActivity.class);
         startActivity(intent);
     }
 }

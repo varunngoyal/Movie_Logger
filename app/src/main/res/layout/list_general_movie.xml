@@ -1,55 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:scrollbars="vertical"
-    android:padding="20dp"
-    >
+    android:id="@+id/cardViewAnime"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/imgIcon"
-        android:src="@mipmap/ic_launcher"
-        android:layout_weight="2"
-        />
+
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:orientation="vertical">
-
-    <TextView
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_weight="8"
-        android:paddingLeft="16dp"
-        android:id="@+id/txtTitle"
-        android:text="@string/app_name"
-        android:textColor="#000000"
-        android:textSize="24sp" />
-
-    <TextView
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_weight="8"
-        android:paddingLeft="16dp"
-        android:id="@+id/txtSubTitle"
-        android:text="This is some subtitle"
-        android:textSize="18sp" />
+        android:orientation="horizontal"
+        android:scrollbars="vertical"
+        android:padding="5dp">
 
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/checkboxHolder">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/checkbox"
+            />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgIcon"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="2"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="8"
+                android:paddingLeft="16dp"
+                android:id="@+id/txtTitle"
+                android:text="@string/app_name"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="8"
+                android:paddingLeft="16dp"
+                android:id="@+id/txtYear"
+                android:text="This is some subtitle"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="8"
+                android:paddingLeft="16dp"
+                android:id="@+id/txtEpisodes"
+                android:text="no. of episodes"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtRating"
+            android:text="1.0"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_weight="2" />
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:id="@+id/imgRating"
 
-        android:layout_weight="2"
-        android:src="@color/colorAccent"/>
-
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

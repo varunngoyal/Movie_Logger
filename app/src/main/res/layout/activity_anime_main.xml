@@ -4,44 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".anime_main">
+    tools:context=".AnimeMainActivity">
 
-    <ScrollView
-        android:id="@+id/scrollview"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
+        android:layout_height="?attr/actionBarSize"
+        app:title=" "
+        android:background="@color/colorPrimary">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"
+                android:background="@color/colorPrimary"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+
+                />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/txtToolbarTitle"
                 android:layout_width="wrap_content"
+                android:text="0 items selected"
+                android:layout_toRightOf="@+id/btnBack"
+                android:textColor="#FFF"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:text="List of watched anime"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/anime_add_page"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView4"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:onClick="addAnime"
-                android:text="Add anime" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list_anime"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/anime_add_page"
-                android:layout_marginTop="26dp" />
+                android:textStyle="bold"
+                android:textSize="20dp"/>
 
         </RelativeLayout>
-    </ScrollView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include layout="@layout/content_anime_main"/>
 </RelativeLayout>
