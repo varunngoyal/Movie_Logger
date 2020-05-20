@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".AddAnimeActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add new anime"
+        android:text="@string/add_new_anime"
         android:layout_gravity="center"
         android:padding="40dp"
         android:textStyle="bold"
@@ -22,11 +24,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:paddingBottom="20dp"
         android:paddingStart="5dp"
         android:paddingLeft="5dp"
         android:hint="Enter name of the anime"
+        android:autofillHints="false"
         android:inputType="textPersonName" />
 
     <EditText
@@ -34,14 +37,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:paddingBottom="20dp"
         android:paddingStart="5dp"
         android:paddingLeft="5dp"
         android:hint="Enter no. of episodes"
         android:inputType="number" />
 
-    <EditText
+<!--    <EditText
         android:id="@+id/year_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,13 +54,29 @@
         android:paddingStart="5dp"
         android:paddingLeft="5dp"
         android:hint="Which year did you watch it"
-        android:inputType="number" />
+        android:inputType="number" />-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:paddingBottom="20dp"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:text="In which year did you watch?"/>
+
+
+    <NumberPicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/year"
+        />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:paddingTop="20dp"
         android:paddingStart="5dp"
         android:paddingLeft="5dp"
@@ -82,5 +101,6 @@
         android:text="ADD ANIME"
         android:enabled="false"/>
 
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

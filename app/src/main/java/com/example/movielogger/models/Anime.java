@@ -2,7 +2,9 @@ package com.example.movielogger.models;
 
 import androidx.annotation.NonNull;
 
-public class Anime {
+import java.io.Serializable;
+
+public class Anime implements Serializable {
 
     private String animeName;
     private int episodes;

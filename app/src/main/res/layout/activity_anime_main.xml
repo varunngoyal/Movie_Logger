@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/layout1"
     tools:context=".AnimeMainActivity">
 
     <RelativeLayout
@@ -25,9 +26,11 @@
                 android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="Back Button"
                 android:src="@drawable/ic_arrow_back"
                 android:background="@color/colorPrimary"
                 android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_centerVertical="true"
 
                 />
@@ -35,12 +38,13 @@
             <TextView
                 android:id="@+id/txtToolbarTitle"
                 android:layout_width="wrap_content"
-                android:text="0 items selected"
+                android:text="@string/_0_items_selected"
                 android:layout_toRightOf="@+id/btnBack"
+                android:layout_toEndOf="@+id/btnBack"
                 android:textColor="#FFF"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
         </RelativeLayout>
 
@@ -55,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
+        android:layout_margin="16dp"
         android:onClick="addAnime"
         app:srcCompat="@drawable/ic_add"
         tools:ignore="VectorDrawableCompat" />
