@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnimeMainActivity"
-            android:theme="@style/AnimeMainTheme"></activity>
+
+        <activity
+            android:name=".AnimeMainActivity"
+            android:theme="@style/AnimeMainTheme" />
         <activity android:name=".AddAnimeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

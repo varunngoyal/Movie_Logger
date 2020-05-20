@@ -71,14 +71,16 @@
         android:numStars="5"
         android:paddingStart="5dp"
         android:paddingLeft="5dp"
+
         android:isIndicator="false"/>
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="addAnime"
-        android:text="ADD ANIME" />
+        android:text="ADD ANIME"
+        android:enabled="false"/>
 
 
 </LinearLayout>

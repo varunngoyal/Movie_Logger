@@ -60,7 +60,8 @@ public class AnimeMainActivity extends AppCompatActivity {
         textToolbarTitle = findViewById(R.id.txtToolbarTitle);
         backBtn = findViewById(R.id.btnBack);
 
-        textToolbarTitle.setVisibility(View.GONE);
+        //textToolbarTitle.setVisibility(View.GONE);
+        textToolbarTitle.setText("List of Watched Anime");
         backBtn.setVisibility(View.GONE);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
